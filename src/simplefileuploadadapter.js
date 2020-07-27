@@ -21,13 +21,13 @@ export default class SimpleFileUploadAdapter extends Plugin {
      * @inheritDoc
      */
     init() {
-        const options = this.editor.config.get( 'simpleUpload' );
+        const options = this.editor.config.get( 'simpleFileUpload' );
 
         if ( !options ) {
             return;
         }
 
-        if ( !options.uploadUrl ) {
+        if ( !options.url ) {
             console.warn( attachLinkToDocumentation(
                 'simple-upload-adapter-missing-uploadUrl: Missing the "uploadUrl" property in the "simpleUpload" editor configuration.'
             ) );
@@ -69,7 +69,7 @@ class FileUploadAdapter {
     _initRequest() {
         const xhr = this.xhr = new XMLHttpRequest();
 
-        xhr.open( 'POST', this.options.uploadUrl, true );
+        xhr.open( 'POST', this.options.url, true );
         xhr.responseType = 'json';
     }
 

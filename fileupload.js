@@ -1,6 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import FileUploadEditing from "./fileuploadediting";
-import FileUploadUI from "./fileuploadui";
+import FileUploadEditing from "./src/fileuploadediting";
+import FileUploadUI from "./src/fileuploadui";
 
 export default class FileUpload extends Plugin {
 

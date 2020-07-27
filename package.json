@@ -1,6 +1,6 @@
 {
   "name": "@emagtechlabs/ckeditor5-file-upload",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Classic File Upload Tool for CKEditor5",
   "main": "src/fileupload.js",
   "keywords": [
@@ -21,11 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eMAGTechLabs/ckeditor5-file-upload"
+    "url": "git+https://github.com/eMAGTechLabs/ckeditor5-file-upload.git"
   },
   "bugs": {
     "url": "https://github.com/eMAGTechLabs/ckeditor5-file-upload/issues"
   },
-  "author": "laviniapiriianu",
-  "license": "GPL"
+  "author": "piriianulavinia",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/eMAGTechLabs/ckeditor5-file-upload#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

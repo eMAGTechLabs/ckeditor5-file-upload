@@ -1,6 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import FileDialogButtonView from '@ckeditor/ckeditor5-upload/src/ui/filedialogbuttonview';
-import fileUploadIcon from './theme/icons/fileupload.svg';
+import fileUploadIcon from '../theme/icons/fileupload.svg';
 
 /**
  * The file upload button plugin.
@@ -21,7 +21,7 @@ export default class FileUploadUI extends Plugin {
 		editor.ui.componentFactory.add( 'fileUpload', locale => {
 			const view = new FileDialogButtonView( locale );
 			const command = editor.commands.get( 'fileUpload' );
-			const fileTypes = editor.config.get( 'file.upload.types' );
+			const fileTypes = editor.config.get( 'simpleFileUpload.fileTypes' );
 
 			view.set( {
 				acceptedType: fileTypes.map(type => `${ type }`).join(','),

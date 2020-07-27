@@ -43,7 +43,7 @@ export default class FileUploadEditing extends Plugin {
 		const conversion = editor.conversion;
 		const fileRepository = editor.plugins.get( FileRepository );
 
-		const fileTypes = createFileTypeRegExp(editor.config.get( 'file.upload.types' ));
+		const fileTypes = createFileTypeRegExp(editor.config.get( 'simpleFileUpload.fileTypes' ));
 
 		// Setup schema to allow uploadId and uploadStatus for files.
 		schema.extend( '$text', {

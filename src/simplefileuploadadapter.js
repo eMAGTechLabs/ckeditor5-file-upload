@@ -89,7 +89,7 @@ class FileUploadAdapter {
             }
 
             resolve( {
-                default: response.url
+                resourceUrl: response.url
             } );
         } );
 

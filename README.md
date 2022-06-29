@@ -32,6 +32,11 @@ Editor.defaultConfig = {
   // ...
   simpleFileUpload: {
     url: 'http://my-custom-link.com',
+	withCredentials: true,
+	headers: {
+		'X-CSRF-TOKEN': 'CSRF_TOKEN',
+		Authorization: 'Bearer <JSON Web Token>',
+	},
     fileTypes: [
       '.pdf',
       '.doc',

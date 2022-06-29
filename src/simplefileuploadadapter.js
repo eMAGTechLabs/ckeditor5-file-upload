@@ -105,6 +105,18 @@ class FileUploadAdapter {
 
     // Prepares the data and sends the request.
     _sendRequest( file ) {
+		// set header request
+		const headers = this.options.headers || {};
+		
+		// Use the withCredentials if exist.
+		const withCredentials = this.options.withCredentials || false;
+		
+		for ( const headerName of Object.keys( headers ) ) {
+			this.xhr.setRequestHeader( headerName, headers[ headerName ] );
+		}
+
+		this.xhr.withCredentials = withCredentials;
+		
         // Prepare the form data.
         const data = new FormData();
 
